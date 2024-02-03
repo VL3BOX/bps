@@ -3,7 +3,7 @@
         <!-- 群号 -->
         <RightSideMsg>
             <em>{{ $t('作者交流群') }}</em> :
-            <strong @click="onQQClick" class="u-link" title="点击复制">
+            <strong @click="onQQClick" class="u-link" :title="$t('点击复制')">
                 <a>{{ qq }}</a>
             </strong>
         </RightSideMsg>
@@ -15,9 +15,9 @@
             <h3 class="m-side-title" style="border-bottom: none">
                 <div class="u-title">
                     <img class="u-icon" svg-inline src="@/assets/img/side/docs.svg" />
-                    推荐小册
+                    {{ $t('推荐小册') }}
                 </div>
-                <a class="u-jbsci" href="/event/jbsci" target="_blank"><i class="el-icon-caret-right"></i>JBSCI期刊</a>
+                <a class="u-jbsci" href="/event/jbsci" target="_blank"><i class="el-icon-caret-right"></i>{{ $t('JBSCI期刊') }}</a>
             </h3>
             <el-collapse class="u-groups" v-model="activeDocGroup">
                 <el-collapse-item :title="list.label" :name="list.name" v-for="list in data" :key="list.name">

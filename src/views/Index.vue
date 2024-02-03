@@ -3,8 +3,8 @@
         <div class="m-archive-box" v-loading="loading">
             <!-- 搜索 -->
             <div class="m-archive-search" slot="search-before">
-                <a :href="publish_link" class="u-publish el-button el-button--primary">+ 发布作品</a>
-                <el-input placeholder="请输入搜索内容" v-model.trim.lazy="search" clearable @clear="onSearch" @keydown.native.enter="onSearch">
+                <a :href="publish_link" class="u-publish el-button el-button--primary">+ {{ $t('发布作品') }}</a>
+                <el-input :placeholder="$t('请输入搜索内容')" v-model.trim.lazy="search" clearable @clear="onSearch" @keydown.native.enter="onSearch">
                     <span slot="prepend"><i class="el-icon-search"></i> <span class="u-search">{{ $t('关键词') }}</span></span>
                     <el-button slot="append" icon="el-icon-position" class="u-btn" @click="onSearch"></el-button>
                 </el-input>
@@ -17,7 +17,7 @@
                     <clientBy @filter="filterImperceptibly" :type="client" :showWujie="true"></clientBy>
 
                     <!-- 类型过滤 -->
-                    <markBy @filter="filterMeta" :marks="pv_types" type="tag" placeholder="类型"></markBy>
+                    <markBy @filter="filterMeta" :marks="pv_types" type="tag" :placeholder="$t('类型')"></markBy>
 
                     <!-- 角标过滤 -->
                     <markBy @filter="filterMeta"></markBy>
@@ -43,7 +43,7 @@
             </div>
 
             <!-- 空 -->
-            <el-alert v-else class="m-archive-null" title="没有找到相关条目" type="info" center show-icon></el-alert>
+            <el-alert v-else class="m-archive-null" :title="$t('没有找到相关条目')" type="info" center show-icon></el-alert>
 
             <!-- 下一页 -->
             <el-button

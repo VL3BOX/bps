@@ -57,9 +57,9 @@
                 <el-divider content-position="left">{{ $t('评论') }}</el-divider>
                 <!-- <template v-if="showComment"> -->
                     <Comment :id="id" category="post" v-if="id && allow_comment" />
-                    <el-alert title="作者没有开启评论功能" type="warning" show-icon v-else></el-alert>
+                    <el-alert :title="$t('作者没有开启评论功能')" type="warning" show-icon v-else></el-alert>
                 <!-- </template> -->
-                <!-- <el-alert title="作者开启了评论仅自己可见" type="warning" show-icon v-else></el-alert> -->
+                <!-- <el-alert :title="$t('作者开启了评论仅自己可见')" type="warning" show-icon v-else></el-alert> -->
             </div>
         </div>
 

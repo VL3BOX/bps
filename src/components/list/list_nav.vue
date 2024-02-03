@@ -1,7 +1,7 @@
 <template>
     <div class="m-list-nav">
         <h5 class="u-title">
-            心法导航
+            {{ $t('心法导航') }}
             <router-link class="u-more" :to="{ query: { subtype: '' } }"
                 >{{ $t('全部心法') }}<i class="el-icon-arrow-right"></i
             ></router-link>
@@ -47,7 +47,7 @@
             </a>
             <a href="/bps/dps" target="_blank">
                 <img class="u-icon" :src="getAppIcon('dps')" />
-                <span>DPS计算器</span>
+                <span>{{ $t('DPS计算器') }}</span>
                 <em>DPS</em>
             </a>
         </div>

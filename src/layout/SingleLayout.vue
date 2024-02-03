@@ -2,7 +2,7 @@
     <div>
         <Header></Header>
         <Breadcrumb
-            name="职业专栏"
+            :name="$t('职业专栏')"
             slug="bps"
             root="/bps"
             :publishEnable="true"

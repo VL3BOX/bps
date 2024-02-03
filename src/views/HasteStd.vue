@@ -4,13 +4,13 @@
             <el-col :lg="8" :md="12" :sm="24">
                 <el-card>
                     <template #header>
-                        技能设<span @click="setCof">定</span>
+                        {{ $t('技能设') }}<span @click="setCof">{{ $t('定') }}</span>
                     </template>
                     <el-form label-position="top">
                         <el-form-item>
                             <div slot="label">
-                                <span>技能时间(秒)</span>
-                                <el-tooltip content="表示技能正读条时间，或持续性伤害技能的每跳时间，或引导读条的每跳时间" placement="top">
+                                <span>{{ $t('技能时间(秒)') }}</span>
+                                <el-tooltip :content="$t('表示技能正读条时间，或持续性伤害技能的每跳时间，或引导读条的每跳时间')" placement="top">
                                     <i class="el-icon-info m-info-icon"></i>
                                 </el-tooltip>
                             </div>
@@ -21,7 +21,7 @@
                         <el-form-item>
                             <div slot="label">
                                 <span>{{ $t('跳数') }}</span>
-                                <el-tooltip content="表示相应技能跳数，正读条为 1 跳，引导读条为造成伤害的次数" placement="top">
+                                <el-tooltip :content="$t('表示相应技能跳数，正读条为 1 跳，引导读条为造成伤害的次数')" placement="top">
                                     <i class="el-icon-info m-info-icon"></i>
                                 </el-tooltip>
                             </div>
@@ -31,9 +31,9 @@
                         </el-form-item>
                     </el-form>
                 </el-card>
-                <el-card header="额外加速奇穴" class="m-extra-box">
+                <el-card :header="$t('额外加速奇穴')" class="m-extra-box">
                     <el-form label-position="top">
-                        <el-form-item label="选择可以额外提供加速的奇穴">
+                        <el-form-item :label="$t('选择可以额外提供加速的奇穴')">
                             <!-- <p>{{ $t('选择可以额外提供加速的奇穴') }}</p> -->
                             <el-radio-group v-model="hasteInfo.extra">
                                 <el-radio v-for="item in extraHasteList" :key="item.name" :label="item.name"
@@ -43,9 +43,9 @@
                         </el-form-item>
                     </el-form>
                 </el-card>
-                <el-card header="额外加速奇穴" class="m-extra-box">
+                <el-card :header="$t('额外加速奇穴')" class="m-extra-box">
                     <el-form label-position="top">
-                        <el-form-item label="选择可以额外提供突破上限的加速的奇穴">
+                        <el-form-item :label="$t('选择可以额外提供突破上限的加速的奇穴')">
                             <!-- <p>{{ $t('选择可以额外提供突破上限的加速的奇穴') }}</p> -->
                             <el-radio-group v-model="hasteInfo.uExtra">
                                 <el-radio v-for="item in extraHasteList" :key="item.name" :label="item.name"
@@ -57,7 +57,7 @@
                 </el-card>
             </el-col>
             <el-col :lg="16" :md="12" :sm="24">
-                <el-card header="计算结果">
+                <el-card :header="$t('计算结果')">
                     <el-table :data="tableData">
                         <template>
                             <el-table-column v-for="header in tableHeader" :key="header.value" :label="header.label"
@@ -67,7 +67,7 @@
                 </el-card>
             </el-col>
         </el-row>
-        <div class="m-haste-copyright"><i class="el-icon-info"></i> 本应用基于胖叔叔加速宝典应用拓展维护更新</div>
+        <div class="m-haste-copyright"><i class="el-icon-info"></i> {{ $t('本应用基于胖叔叔加速宝典应用拓展维护更新') }}</div>
     </div>
 </template>
 

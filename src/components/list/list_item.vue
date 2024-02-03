@@ -37,7 +37,7 @@
                     },
                     caller,
                 }"
-                >{{ item.post_title || "无标题" }}</a
+                >{{ item.post_title || $t('无标题') }}</a
             >
 
             <!-- 角标 -->

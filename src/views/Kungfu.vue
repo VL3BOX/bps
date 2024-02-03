@@ -25,7 +25,7 @@
                             </a>
                         </li>
                     </ul>
-                    <el-empty description="当前心法暂无此类技能" v-else :image-size="180"></el-empty>
+                    <el-empty :description="$t('当前心法暂无此类技能')" v-else :image-size="180"></el-empty>
                 </el-tab-pane>
             </el-tabs>
 

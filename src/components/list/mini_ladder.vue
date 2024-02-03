@@ -2,11 +2,11 @@
     <div class="m-bps-ladder-mini">
         <h3 class="m-ladder-title">
             <span class="u-title">
-                <img class="u-icon" svg-inline src="@/assets/img/side/rank.svg" /> 天梯榜
+                <img class="u-icon" svg-inline src="@/assets/img/side/rank.svg" /> {{ $t('天梯榜') }}
                 <!-- <span class="u-dot">·</span> -->
             </span>
-            <span class="u-more" @click="viewRank">{{ $t('查看更多') }}<('查看更多') }}<i class="el-icon-d-arrow-right"></i></span>
-            <!-- <el-select v-model="zlp" placeholder="请选择" size="medium">
+            <span class="u-more" @click="viewRank">{{ $t('查看更多') }}<i class="el-icon-d-arrow-right"></i></span>
+            <!-- <el-select v-model="zlp" :placeholder="$t('请选择')" size="medium">
                 <el-option v-for="item in zlps" :key="item.value" :label="item.label" :value="item.value"></el-option>
             </el-select> -->
         </h3>

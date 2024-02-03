@@ -1,9 +1,9 @@
 <template>
     <div class="v-story" v-loading="loading">
         <el-tabs v-show="isSchool" v-model="active" type="card" @tab-click="loadData">
-            <el-tab-pane label="门派背景" name="introduction"></el-tab-pane>
-            <el-tab-pane label="门派事记" name="history"></el-tab-pane>
-            <el-tab-pane label="门派人物" name="person"></el-tab-pane>
+            <el-tab-pane :label="$t('门派背景')" name="introduction"></el-tab-pane>
+            <el-tab-pane :label="$t('门派事记')" name="history"></el-tab-pane>
+            <el-tab-pane :label="$t('门派人物')" name="person"></el-tab-pane>
         </el-tabs>
 
         <div class="m-bps-story">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </template>
-            <el-alert v-else title="没有相关资料" type="info" show-icon></el-alert>
+            <el-alert v-else :title="$t('没有相关资料')" type="info" show-icon></el-alert>
         </div>
     </div>
 </template>

@@ -2,7 +2,7 @@
     <AppLayout>
         <div class="v-raw" v-loading="loading">
             <el-tabs v-model="kungfuid" type="card">
-                <el-tab-pane v-if="~~mountid" label="心法被动" name="pasv" key="pasv"></el-tab-pane>
+                <el-tab-pane v-if="~~mountid" :label="$t('心法被动')" name="pasv" key="pasv"></el-tab-pane>
                 <el-tab-pane
                     :label="showKungfuName(kungfu)"
                     :name="kungfu"
@@ -10,16 +10,16 @@
                     :key="kungfu"
                 ></el-tab-pane>
                 <template v-if="~~mountid">
-                    <el-tab-pane label="奇穴" name="talent" key="talent" v-if="client === 'std'"></el-tab-pane>
-                    <el-tab-pane label="镇派" name="talent2" key="talent2" v-if="client === 'origin'"></el-tab-pane>
-                    <el-tab-pane label="阵法" name="zhenfa" key="zhenfa"></el-tab-pane>
+                    <el-tab-pane :label="$t('奇穴')" name="talent" key="talent" v-if="client === 'std'"></el-tab-pane>
+                    <el-tab-pane :label="$t('镇派')" name="talent2" key="talent2" v-if="client === 'origin'"></el-tab-pane>
+                    <el-tab-pane :label="$t('阵法')" name="zhenfa" key="zhenfa"></el-tab-pane>
                 </template>
             </el-tabs>
 
             <!-- 搜索 -->
             <!-- <div class="m-raw-search m-archive-search">
             <el-input
-                placeholder="搜索关键词"
+                :placeholder="$t('搜索关键词')"
                 v-model="search"
                 class="input-with-select"
                 @change="loadSkills"
@@ -99,7 +99,7 @@
                     </li>
                 </template>
             </ul>
-            <el-alert v-else class="m-archive-null" title="没有找到相关条目" type="info" center show-icon></el-alert>
+            <el-alert v-else class="m-archive-null" :title="$t('没有找到相关条目')" type="info" center show-icon></el-alert>
         </div>
     </AppLayout>
 </template>

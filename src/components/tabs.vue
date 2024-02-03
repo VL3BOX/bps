@@ -1,6 +1,6 @@
 <template>
     <el-tabs class="m-tabs" v-model="view" @tab-click="changeView">
-        <el-tab-pane label="职业攻略" name="index">
+        <el-tab-pane :label="$t('职业攻略')" name="index">
             <span slot="label">
                 <i class="el-icon-collection"></i>
                 <b>{{ $t('职业攻略') }}</b>
@@ -8,7 +8,7 @@
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="精品区" name="highlights">
+        <el-tab-pane :label="$t('精品区')" name="highlights">
             <span slot="label">
                 <i class="el-icon-star-off"></i>
                 <b>{{ $t('精品区') }}</b>
@@ -16,7 +16,7 @@
             </span>
         </el-tab-pane>
 
-        <!-- <el-tab-pane label="技能系数" name="skill">
+        <!-- <el-tab-pane :label="$t('技能系数')" name="skill">
             <span slot="label">
                 <i class="el-icon-key"></i>
                 <b>{{ $t('技能系数') }}</b>
@@ -31,21 +31,21 @@
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="秘籍大全" name="recipe">
+        <el-tab-pane :label="$t('秘籍大全')" name="recipe">
             <span slot="label">
                 <i class="el-icon-magic-stick"></i>
                 <b>{{ $t('秘籍大全') }}</b>
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="技能合集" name="kungfu">
+        <el-tab-pane :label="$t('技能合集')" name="kungfu">
             <span slot="label">
                 <i class="el-icon-notebook-1"></i>
                 <b>{{ $t('技能合集') }}</b>
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="急速阈值" name="haste">
+        <el-tab-pane :label="$t('急速阈值')" name="haste">
             <span slot="label">
                 <i class="el-icon-stopwatch"></i>
                 <b>{{ $t('急速阈值') }}</b>
@@ -59,21 +59,21 @@
             </span>
         </el-tab-pane>
 
-        <el-tab-pane label="门派天梯" name="ladder" v-if="client == 'std'">
+        <el-tab-pane :label="$t('门派天梯')" name="ladder" v-if="client == 'std'">
             <span slot="label">
                 <i class="el-icon-s-data"></i>
                 <b>{{ $t('门派天梯') }}</b>
             </span>
         </el-tab-pane>
 
-        <!-- <el-tab-pane label="作品小册" name="collection">
+        <!-- <el-tab-pane :label="$t('作品小册')" name="collection">
             <span slot="label">
                 <i class="el-icon-paperclip"></i>
                 <b>{{ $t('作品小册') }}</b>
             </span>
         </el-tab-pane> -->
 
-        <el-tab-pane label="源码解析" name="lua" v-if="isSuperAuthor">
+        <el-tab-pane :label="$t('源码解析')" name="lua" v-if="isSuperAuthor">
             <span slot="label">
                 <i class="el-icon-full-screen"></i>
                 <b>{{ $t('源码分析') }}</b>
@@ -81,14 +81,14 @@
             </span>
         </el-tab-pane>
 
-        <!-- <el-tab-pane label="门派群组" name="group" v-if="client == 'std'">
+        <!-- <el-tab-pane :label="$t('门派群组')" name="group" v-if="client == 'std'">
             <span slot="label">
                 <i class="el-icon-headset"></i>
                 <b>{{ $t('门派群组') }}</b>
             </span>
         </el-tab-pane> -->
 
-        <!-- <el-tab-pane label="背景故事" name="story">
+        <!-- <el-tab-pane :label="$t('背景故事')" name="story">
             <span slot="label">
                 <i class="el-icon-film"></i>
                 <b>{{ $t('背景故事') }}</b>

@@ -1,7 +1,7 @@
 <template>
     <el-drawer
         class="c-admin"
-        title="管理面板"
+        :title="$t('管理面板')"
         :visible="modelValue"
         :before-close="close"
         :append-to-body="true"
@@ -23,7 +23,7 @@
             <div class="c-admin-title">
                 <el-input
                     v-model="title"
-                    placeholder="请输入小册标题"
+                    :placeholder="$t('请输入小册标题')"
                     class="input-author drawer-item-content"
                 >
                         <template slot="prepend">{{ $t('标题') }}</template>
@@ -34,7 +34,7 @@
                 <div class="c-admin-author">
                     <el-input
                         v-model="post_author"
-                        placeholder="请输入作者uid"
+                        :placeholder="$t('请输入作者uid')"
                         class="input-author drawer-item-content"
                     >
                         <template slot="prepend">{{ $t('作者') }}</template>
@@ -44,7 +44,7 @@
 
             <div class="c-admin-buttons">
                 <el-button type="primary" @click="submit" :loading="pushing">{{ $t('提交') }}</el-button>
-                <el-button type="plain" @click="close">{{ $t('取消') }}<$t('取消') }}</el-button>
+                <el-button type="plain" @click="close">{{ $t('取消') }}</el-button>
             </div>
         </div>
     </el-drawer>

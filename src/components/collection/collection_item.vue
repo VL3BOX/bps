@@ -41,7 +41,7 @@
             <div class="u-meta">
                 <span class="u-updated">
                     <i class="el-icon-refresh"></i>
-                    最后更新于{{ dateFormat(data.updated) }}
+                    {{ $t('最后更新于') + dateFormat(data.updated) }}
                 </span>
             </div>
         </div>

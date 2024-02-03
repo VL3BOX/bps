@@ -7,7 +7,7 @@
                         <img class="u-icon" svg-inline src="../assets/img/side/rank.svg" /> 门派天梯榜
                         <span class="u-dot">·</span>
                     </span>
-                    <el-select v-model="zlp" placeholder="请选择">
+                    <el-select v-model="zlp" :placeholder="$t('请选择')">
                         <el-option
                             v-for="item in zlps"
                             :key="item.key"
@@ -19,19 +19,19 @@
                 <div class="m-ladder-desc" v-html="description"></div>
                 <div class="m-ladder-filter">
                     <el-radio-group class="u-filter-rank" v-model="filter" size="medium">
-                        <el-radio-button label="全部"></el-radio-button>
-                        <el-radio-button label="只显示最低"></el-radio-button>
-                        <el-radio-button label="只显示最高"></el-radio-button>
+                        <el-radio-button :label="$t('全部')"></el-radio-button>
+                        <el-radio-button :label="$t('只显示最低')"></el-radio-button>
+                        <el-radio-button :label="$t('只显示最高')"></el-radio-button>
                     </el-radio-group>
-                    <el-select class="u-filter-school" v-model="school" placeholder="只看门派">
+                    <el-select class="u-filter-school" v-model="school" :placeholder="$t('只看门派')">
                         <el-option
                             v-for="(school_name, school_id) in schoolmap"
                             :key="school_id"
-                            :label="~~school_id ? school_name : '全部'"
+                            :label="~~school_id ? school_name : $t('全部')"
                             :value="school_id"
                         >
                             <img :src="showSchoolIcon(school_id)" class="u-school-icon" />
-                            <span class="u-school-name">{{ ~~school_id ? school_name : "全部" }}</span>
+                            <span class="u-school-name">{{ ~~school_id ? school_name : $t('全部') }}</span>
                             <!-- <span class="u-school-name">{{school_name}}</span> -->
                         </el-option>
                     </el-select>

@@ -34,14 +34,14 @@
                                     class="u-platform"
                                     v-if="group.platform == 'QQ'"
                                     size="mini"
-                                    v-text="`${group.platform}群`"
+                                    v-text="`${group.platform + $t('群')}`"
                                 ></el-tag>
                                 <el-tag
                                     class="u-platform"
                                     v-if="group.platform == 'YY'"
                                     size="mini"
                                     type="info"
-                                    v-text="`${group.platform}群`"
+                                    v-text="`${group.platform + $t('群')}`"
                                 ></el-tag>
                                 <el-tag
                                     class="u-number"

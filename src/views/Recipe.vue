@@ -4,7 +4,7 @@
             <!-- 搜索 -->
             <div class="m-recipe-search">
                 <el-input v-model.trim.lazy="search" placeholder="请输入关键词.." clearable @clear="onSearch" @keydown.native.enter="onSearch">
-                    <template #prepend> <i class="el-icon-search"></i> 搜索 </template>
+                    <template #prepend> <i class="el-icon-search"></i> {{ $t('搜索') }} </template>
                     <template #append>
                         <el-button icon="el-icon-position" @click="onSearch"></el-button>
                     </template>
@@ -36,12 +36,12 @@
                     </el-table-column>
                     <el-table-column
                         prop="SkillName"
-                        label="技能名称"
+                        :label="$t('技能名称')"
                         width="120"
                         :filters="skills"
                         :filter-method="filterHandler"
                     ></el-table-column>
-                    <el-table-column prop="name" label="秘籍名称" sortable width="300">
+                    <el-table-column prop="name" :label="$t('秘籍名称')" sortable width="300">
                         <template slot-scope="scope">
                             <span :href="getItemLink(scope.row.RecipeName)" class="u-link">
                                 <img :src="iconLink(scope.row.IconID)" class="u-icon" />
@@ -51,12 +51,12 @@
                             </span>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="Desc" label="秘籍描述" sortable>
+                    <el-table-column prop="Desc" :label="$t('秘籍描述')" sortable>
                         <template slot-scope="scope">
                             <span class="u-desc">{{ scope.row.Desc }}</span>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="exam_print" label="消耗" width="100" sortable>
+                    <el-table-column prop="exam_print" :label="$t('消耗')" width="100" sortable>
                         <template slot-scope="scope">
                             <template v-if="scope.row.ExamPrint && !scope.row.TrainValue">
                                 <span class="u-points">
@@ -78,7 +78,7 @@
                             </template>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="tasks" label="任务来源">
+                    <el-table-column prop="tasks" :label="$t('任务来源')">
                         <template slot-scope="scope">
                             <a
                                 v-for="task in scope.row.tasks"
@@ -91,7 +91,7 @@
                             </a>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="books" label="书籍来源">
+                    <el-table-column prop="books" :label="$t('书籍来源')">
                         <template slot-scope="scope">
                             <a
                                 v-for="book in scope.row.books"
@@ -104,7 +104,7 @@
                             </a>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="doodad_template_id" label="碑铭来源">
+                    <el-table-column prop="doodad_template_id" :label="$t('碑铭来源')">
                         <template slot-scope="scope">
                             <a
                                 v-for="doodad in scope.row.doodad_template_id"
@@ -117,15 +117,15 @@
                             </a>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="_remark" label="备注">
+                    <el-table-column prop="_remark" :label="$t('备注')">
                         <template slot-scope="scope">
                             <span>{{ scope.row._remark }}</span>
                         </template>
                     </el-table-column>
-                    <el-table-column prop="RecipeName" label="百科">
+                    <el-table-column prop="RecipeName" :label="$t('百科')">
                         <template slot-scope="scope">
                             <a :href="getItemWiki(scope.row.RecipeName)" class="u-link" target="_blank" @click.stop
-                                >查看百科&raquo;</a
+                                >{{ $t('查看百科') }}&raquo;</a
                             >
                         </template>
                     </el-table-column>

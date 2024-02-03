@@ -4,13 +4,13 @@
             <el-col :lg="8" :md="12" :sm="24" class="m-haste-input">
                 <el-card header="skill_settings">
                     <template #header>
-                        技能设<span @click="setCof">定</span>
+                        {{ $t('技能设') }}<span @click="setCof">{{ $t('定') }}</span>
                     </template>
                     <el-form>
                         <div>
                             <span class="m-haste-card-text">{{ $t('技能时间') }}</span>
                             <el-tooltip
-                                content="表示技能正读条时间，或持续性伤害技能的每跳时间，或引导读条的每跳时间"
+                                :content="$t('表示技能正读条时间，或持续性伤害技能的每跳时间，或引导读条的每跳时间')"
                                 placement="top"
                             >
                                 <i class="el-icon-info m-info-icon"></i>
@@ -27,7 +27,7 @@
                         <div>
                             <span class="m-haste-card-text">{{ $t('跳数') }}</span>
                             <el-tooltip
-                                content="表示相应技能跳数，正读条为 1 跳，引导读条为造成伤害的次数"
+                                :content="$t('表示相应技能跳数，正读条为 1 跳，引导读条为造成伤害的次数')"
                                 placement="top"
                             >
                                 <i class="el-icon-info m-info-icon"></i>

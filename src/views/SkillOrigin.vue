@@ -1,7 +1,7 @@
 <template>
     <div class="v-skill" v-loading="loading">
         <el-tabs v-model="active" type="card" @tab-click="changeType">
-            <el-tab-pane label="技能" name="skill">
+            <el-tab-pane :label="$t('技能')" name="skill">
                 <div class="m-skill-box" v-if="skill && schoolName != '通用'">
                     <div class="m-skill-kungfu" v-for="(skills, kungfu) in skill" :key="kungfu">
                         <h4 class="u-title">{{ kungfu }}</h4>
@@ -11,10 +11,10 @@
                     </div>
                 </div>
                 <div class="m-skill-null" v-else>
-                    <el-alert title="该心法数据暂缺，请通过侧边栏切换心法" type="info" show-icon></el-alert>
+                    <el-alert :title="$t('该心法数据暂缺，请通过侧边栏切换心法')" type="info" show-icon></el-alert>
                 </div>
             </el-tab-pane>
-            <el-tab-pane label="镇派" name="talent">
+            <el-tab-pane :label="$t('镇派')" name="talent">
                 <div class="m-skill-box" v-if="talent && schoolName != '通用'">
                     <div class="m-skill-talent" v-for="(talents, talent_group) in talent" :key="talent_group">
                         <el-divider class="u-title" content-position="left">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="m-skill-null" v-else>
-                    <el-alert title="该心法数据暂缺，请通过侧边栏切换心法" type="info" show-icon></el-alert>
+                    <el-alert :title="$t('该心法数据暂缺，请通过侧边栏切换心法')" type="info" show-icon></el-alert>
                 </div>
             </el-tab-pane>
         </el-tabs>

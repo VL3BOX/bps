@@ -2,7 +2,7 @@
     <div>
         <Header></Header>
         <Breadcrumb
-            name="剑三小册"
+            :name="$t('剑三小册')"
             slug="collection"
             root="/collection"
             :publishEnable="true"

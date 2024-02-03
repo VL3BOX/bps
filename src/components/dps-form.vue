@@ -1,10 +1,10 @@
 <template>
     <el-dialog custom-class="m-dps-form" :visible="modelValue" @close="close" append-to-body :title="title">
         <el-form :model="form" :rules="rules" label-position="left" label-width="80px" ref="form">
-            <el-form-item label="心法" prop="mount">
+            <el-form-item :label="$t('心法')" prop="mount">
                 <el-select
                     v-model="form.mount"
-                    placeholder="请选择心法"
+                    :placeholder="$t('请选择心法')"
                     style="width: 100%"
                     popper-class="m-mount-select"
                     filterable
@@ -22,10 +22,10 @@
                     </el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="关联作品" prop="url">
+            <el-form-item :label="$t('关联作品')" prop="url">
                 <el-select
                     v-model="form.url"
-                    placeholder="输入关键词进行搜索"
+                    :placeholder="$t('输入关键词进行搜索')"
                     style="width: 100%"
                     filterable
                     :filter-method="loadData"
@@ -39,8 +39,8 @@
                     ></el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="客户端" prop="client">
-                <el-select v-model="form.client" placeholder="请选择客户端" style="width: 100%">
+            <el-form-item :label="$t('客户端')" prop="client">
+                <el-select v-model="form.client" :placeholder="$t('请选择客户端')" style="width: 100%">
                     <el-option
                         v-for="item in options.client_filters"
                         :key="item.value"
@@ -49,8 +49,8 @@
                     ></el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="类型" prop="type">
-                <el-select v-model="form.type" placeholder="请选择类型" style="width: 100%">
+            <el-form-item :label="$t('类型')" prop="type">
+                <el-select v-model="form.type" :placeholder="$t('请选择类型')" style="width: 100%">
                     <el-option
                         v-for="item in options.type_filters"
                         :key="item.value"
@@ -59,15 +59,15 @@
                     ></el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="贡献者" prop="contributors">
-                <el-input v-model="form.contributors" placeholder="请输入除自己外的其余贡献者魔盒UID，用半角逗号,隔开"></el-input>
+            <el-form-item :label="$t('贡献者')" prop="contributors">
+                <el-input v-model="form.contributors" :placeholder="$t('请输入除自己外的其余贡献者魔盒UID，用半角逗号,隔开')"></el-input>
             </el-form-item>
-            <el-form-item label="备注" prop="remark">
+            <el-form-item :label="$t('备注')" prop="remark">
                 <el-input v-model="form.remark" placeholder="（非必填）"></el-input>
             </el-form-item>
             <el-form-item>
                 <el-button type="primary" @click="submit">{{ $t('提交') }}</el-button>
-                <el-button @click="close">{{ $t('取消') }}<$t('取消') }}<$t('取消') }}</el-button>
+                <el-button @click="close">{{ $t('取消') }}</el-button>
             </el-form-item>
         </el-form>
     </el-dialog>
