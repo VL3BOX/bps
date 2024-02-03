@@ -2,7 +2,7 @@
     <div class="v-skill" v-loading="loading">
         <el-tabs v-model="active" type="card" @tab-click="changeType">
             <el-tab-pane :label="$t('技能')" name="skill">
-                <div class="m-skill-box" v-if="skill && xf != {{ $t('通用') }}">
+                <div class="m-skill-box" v-if="skill && xf != '通用'">
                     <div class="m-skill-kungfu" v-for="(kungfu, i) in skill" :key="i">
                         <h4 class="u-title">{{ kungfu.remark }}</h4>
                         <div class="u-list">
@@ -15,7 +15,7 @@
                 </div>
             </el-tab-pane>
             <el-tab-pane :label="$t('奇穴')" name="talent">
-                <div class="m-skill-box" v-if="talent && xf != {{ $t('通用') }}">
+                <div class="m-skill-box" v-if="talent && xf != '通用'">
                     <div class="m-skill-talent" v-for="(talent, i) in talent" :key="i">
                         <el-divider class="u-title" content-position="left">
                             {{ talent.level_name }}
@@ -36,7 +36,7 @@
                 </div>
             </el-tab-pane>
             <el-tab-pane :label="$t('阵法')" name="zhenfa">
-                <div class="m-skill-box" v-if="zhenfa && xf != {{ $t('通用') }}">
+                <div class="m-skill-box" v-if="zhenfa && xf != '通用'">
                     <div class="m-skill-zhenfa" v-if="zhenfa">
                         <i class="u-pic">
                             <img :src="zhenfa.icon.FileName" />
