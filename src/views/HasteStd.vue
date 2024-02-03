@@ -20,7 +20,7 @@
                         </el-form-item>
                         <el-form-item>
                             <div slot="label">
-                                <span>跳数</span>
+                                <span>{{ $t('跳数') }}</span>
                                 <el-tooltip content="表示相应技能跳数，正读条为 1 跳，引导读条为造成伤害的次数" placement="top">
                                     <i class="el-icon-info m-info-icon"></i>
                                 </el-tooltip>
@@ -34,7 +34,7 @@
                 <el-card header="额外加速奇穴" class="m-extra-box">
                     <el-form label-position="top">
                         <el-form-item label="选择可以额外提供加速的奇穴">
-                            <!-- <p>选择可以额外提供加速的奇穴</p> -->
+                            <!-- <p>{{ $t('选择可以额外提供加速的奇穴') }}</p> -->
                             <el-radio-group v-model="hasteInfo.extra">
                                 <el-radio v-for="item in extraHasteList" :key="item.name" :label="item.name"
                                     v-show="item.label != 2">{{
@@ -46,7 +46,7 @@
                 <el-card header="额外加速奇穴" class="m-extra-box">
                     <el-form label-position="top">
                         <el-form-item label="选择可以额外提供突破上限的加速的奇穴">
-                            <!-- <p>选择可以额外提供突破上限的加速的奇穴</p> -->
+                            <!-- <p>{{ $t('选择可以额外提供突破上限的加速的奇穴') }}</p> -->
                             <el-radio-group v-model="hasteInfo.uExtra">
                                 <el-radio v-for="item in extraHasteList" :key="item.name" :label="item.name"
                                     v-show="item.label != 1">{{

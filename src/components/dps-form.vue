@@ -66,8 +66,8 @@
                 <el-input v-model="form.remark" placeholder="（非必填）"></el-input>
             </el-form-item>
             <el-form-item>
-                <el-button type="primary" @click="submit">提交</el-button>
-                <el-button @click="close">取消</el-button>
+                <el-button type="primary" @click="submit">{{ $t('提交') }}</el-button>
+                <el-button @click="close">{{ $t('取消') }}<$t('取消') }}<$t('取消') }}</el-button>
             </el-form-item>
         </el-form>
     </el-dialog>

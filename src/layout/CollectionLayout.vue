@@ -17,7 +17,7 @@
                     icon="el-icon-setting"
                     @click="onAdminClick"
                     v-if="isEditor"
-                >管理</el-button>
+                >{{ $t('管理') }}</el-button>
             </template>
         </Breadcrumb>
         <LeftSidebar :uid="user_id">

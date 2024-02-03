@@ -8,7 +8,7 @@
                     </template>
                     <el-form>
                         <div>
-                            <span class="m-haste-card-text">技能时间</span>
+                            <span class="m-haste-card-text">{{ $t('技能时间') }}</span>
                             <el-tooltip
                                 content="表示技能正读条时间，或持续性伤害技能的每跳时间，或引导读条的每跳时间"
                                 placement="top"
@@ -25,7 +25,7 @@
                         >
                         </el-input-number>
                         <div>
-                            <span class="m-haste-card-text">跳数</span>
+                            <span class="m-haste-card-text">{{ $t('跳数') }}</span>
                             <el-tooltip
                                 content="表示相应技能跳数，正读条为 1 跳，引导读条为造成伤害的次数"
                                 placement="top"
@@ -47,7 +47,7 @@
             </el-col>
             <el-col :lg="16" :md="12" :sm="24">
                 <el-card header="cal_result">
-                    <div slot="header">计算结果</div>
+                    <div slot="header">{{ $t('计算结果') }}</div>
                     <el-table :data="tableData">
                         <el-table-column
                             v-for="header in tableHeader"

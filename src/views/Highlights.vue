@@ -5,7 +5,7 @@
             <div class="m-archive-search" slot="search-before">
                 <a :href="publish_link" class="u-publish el-button el-button--primary">+ 发布作品</a>
                 <el-input placeholder="请输入搜索内容" v-model.trim.lazy="search" clearable @clear="onSearch" @keydown.native.enter="onSearch">
-                    <span slot="prepend"><i class="el-icon-search"></i> <span class="u-search">关键词</span></span>
+                    <span slot="prepend"><i class="el-icon-search"></i> <span class="u-search">{{ $t('关键词') }}</span></span>
                     <el-button slot="append" icon="el-icon-position" class="u-btn" @click="onSearch"></el-button>
                 </el-input>
             </div>
@@ -18,7 +18,7 @@
 
                     <!-- 类型过滤 -->
                     <el-radio-group class="u-type" v-model="tag" size="mini">
-                        <el-radio-button label="">全部</el-radio-button>
+                        <el-radio-button label="">{{ $t('全部') }}</el-radio-button>
                         <el-radio-button label="PVE">PVE</el-radio-button>
                         <el-radio-button label="PVP">PVP</el-radio-button>
                     </el-radio-group>
@@ -57,7 +57,7 @@
                 @click="appendPage"
                 :loading="loading"
                 icon="el-icon-arrow-down"
-                >加载更多</el-button
+                >{{ $t('加载更多') }}</el-button
             >
 
             <!-- 分页 -->

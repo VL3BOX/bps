@@ -59,7 +59,7 @@
                 </ul>
             </el-collapse-item>
         </el-collapse>
-        <div v-else class="u-groups-empty">暂无相关群组</div>
+        <div v-else class="u-groups-empty">{{ $t('暂无相关群组') }}</div>
     </div>
 </template>
 

@@ -50,7 +50,7 @@
         <div class="u-content u-desc">
             <!-- {{ item.post_excerpt || item.post_title || "这个作者很懒,什么都没有留下" }} -->
             <div class="u-metalist u-collection">
-                <strong>小册</strong>
+                <strong>{{ $t('小册') }}</strong>
                 <em>
                     <template v-if="~~item.post_collection">
                         <a :href="`/collection/${item.post_collection}`" target="_blank"
@@ -61,7 +61,7 @@
                 </em>
             </div>
             <div class="u-metalist u-topics">
-                <strong>主题</strong>
+                <strong>{{ $t('主题') }}</strong>
                 <em>
                     <template v-if="item.topics && item.topics.length">
                         <a class="u-topic" :href="`/bps?topic=${topic}`" v-for="topic in item.topics" :key="topic">{{

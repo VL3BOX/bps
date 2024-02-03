@@ -55,7 +55,7 @@
                                 <!-- 编辑 -->
                                 <a class="u-edit u-sub-block" :href="edit_link" v-if="canEdit">
                                     <i class="u-icon-edit el-icon-edit-outline"></i>
-                                    <span>编辑</span>
+                                    <span>{{ $t('编辑') }}</span>
                                 </a>
 
                                 <!-- 删除 -->
@@ -66,7 +66,7 @@
                                     v-if="canEdit"
                                 >
                                     <i class="u-icon-remove el-icon-delete"></i>
-                                    <span>删除</span>
+                                    <span>{{ $t('删除') }}</span>
                                 </a>
                             </div>
                         </header>
@@ -122,7 +122,7 @@
                 <!-- <div class="m-tags" v-if="collection.tags && collection.tags.length">
                 <div class="u-tags-title">
                     <i class="el-icon-price-tag"></i>
-                    <span>标签</span>
+                    <span>{{ $t('标签') }}</span>
                 </div>
                 <ul class="u-tags">
                     <li v-for="(tag, key) in collection.tags" :key="key" v-text="tag" class="u-tag"></li>

@@ -3,14 +3,14 @@
         <singlebox :post="post" :stat="stat" v-loading="loading" @extendUpdate="updateExtend">
             <template slot="single-header">
                 <div class="u-meta u-sub-block">
-                    <em class="u-label">心法</em>
+                    <em class="u-label">{{ $t('心法') }}</em>
                     <span class="u-value">
                         <img class="u-icon-xf" :src="xficon(xficon_id)" :alt="xf" />
                         {{ xf }}
                     </span>
                 </div>
                 <div class="u-meta u-sub-block">
-                    <em class="u-label">资料片</em>
+                    <em class="u-label">{{ $t('资料片') }}</em>
                     <span class="u-value">{{ zlp }}</span>
                 </div>
             </template>

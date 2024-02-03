@@ -3,7 +3,7 @@
         <h5 class="u-title">
             心法导航
             <router-link class="u-more" :to="{ query: { subtype: '' } }"
-                >全部心法<i class="el-icon-arrow-right"></i
+                >{{ $t('全部心法') }}<i class="el-icon-arrow-right"></i
             ></router-link>
         </h5>
         <ul class="m-bps-nav u-list">
@@ -33,16 +33,16 @@
             </li>
         </ul>
 
-        <h5 class="u-title">在线应用</h5>
+        <h5 class="u-title">{{ $t('在线应用') }}</h5>
         <div class="m-nav-group">
             <!-- <a href="/pz" target="_blank">
                 <img class="u-icon" :src="getAppIcon('pz', true)" />
-                <span>配装模拟器</span>
+                <span>{{ $t('配装模拟器') }}</span>
                 <em>Assembly Simulator</em>
             </a> -->
             <a href="/bps/haste" target="_blank">
                 <img class="u-icon" :src="getAppIcon('haste')" />
-                <span>加速阈值</span>
+                <span>{{ $t('加速阈值') }}</span>
                 <em>Haste</em>
             </a>
             <a href="/bps/dps" target="_blank">

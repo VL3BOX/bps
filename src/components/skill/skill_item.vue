@@ -8,13 +8,13 @@
         </div>
         <div class="u-details">
             <span class="u-distance"
-                ><em>距离</em><span>{{ item.distance }}</span></span
+                ><em>{{ $t('距离') }}</em><span>{{ item.distance }}</span></span
             >
             <span class="u-weapon"
-                ><em>武器</em><span>{{ item.weapon }}</span></span
+                ><em>{{ $t('武器') }}</em><span>{{ item.weapon }}</span></span
             >
             <span class="u-consumption"
-                ><em>消耗内力</em><span>{{ item.consumption }}</span></span
+                ><em>{{ $t('消耗内力') }}</em><span>{{ item.consumption }}</span></span
             >
         </div>
         <div class="u-descbox">
@@ -39,14 +39,14 @@
                 icon="el-icon-connection"
                 @click="toggleCheasts(item)"
                 v-if="item.cheasts.length"
-                >秘籍</el-button
+                >{{ $t('秘籍') }}</el-button
             >
             <el-button
                 class="u-panel-wiki"
                 size="mini"
                 icon="el-icon-reading"
                 @click="toggleWiki(item)"
-                >百科</el-button
+                >{{ $t('百科') }}</el-button
             >
         </div>
     </div>

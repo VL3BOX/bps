@@ -92,7 +92,7 @@
                                     size="mini"
                                     icon="el-icon-edit"
                                     type="primary"
-                                    >编辑</el-button
+                                    >{{ $t('编辑') }}</el-button
                                 >
                             </div>
                         </template>

@@ -4,7 +4,7 @@
             <div class="m-lua-index m-lua-box">
                 <div class="u-title">
                     <i class="el-icon-collection-tag"></i>
-                    <span class="u-title-list" @click="showList">文件夹</span>
+                    <span class="u-title-list" @click="showList">{{ $t('文件夹') }}</span>
                 </div>
                 <div
                     class="u-type"
@@ -34,7 +34,7 @@
             <div class="m-lua-tree m-lua-box">
                 <div class="u-title">
                     <i class="el-icon-collection-tag"></i>
-                    <span class="u-title-list" @click="showList">文件列表</span>
+                    <span class="u-title-list" @click="showList">{{ $t('文件列表') }}</span>
                     <span class="u-title-file"><i class="el-icon-arrow-right"></i> {{ file }}</span>
                     <div class="u-back" @click="showList" v-if="data"><i class="el-icon-caret-left"></i> 返 回</div>
                 </div>
@@ -78,7 +78,7 @@
         <div class="v-null" v-else>
             <el-alert type="warning" show-icon
                 ><span slot="title"
-                    >没有查看权限，仅<a href="/dashboard/#cooperation" target="_blank">【签约作者】</a>可见。</span
+                    >{{ $t('没有查看权限，仅') }}<a href="/dashboard/#cooperation" target="_blank">【签约作者】</a>{{ $t('可见。') }}</span
                 ></el-alert
             >
         </div>

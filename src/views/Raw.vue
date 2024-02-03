@@ -24,7 +24,7 @@
                 class="input-with-select"
                 @change="loadSkills"
             >
-                <template slot="prepend">技能名</template>
+                <template slot="prepend">{{ $t('技能名') }}</template>
                 <el-button slot="append" icon="el-icon-search"></el-button>
             </el-input>
         </div>-->

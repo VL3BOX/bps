@@ -3,12 +3,12 @@
         <div class="m-wiki-post-panel" v-if="wiki && wiki.post">
             <WikiPanel :wiki-post="wiki" :showQR="false">
                 <template slot="head-title">
-                    <span class="u-txt">技能百科</span>
+                    <span class="u-txt">{{ $t('技能百科') }}</span>
                 </template>
                 <template slot="head-actions">
                     <a class="el-button el-button--primary" :href="publish_url(`skill/${id}`)" target="_blank">
                         <i class="el-icon-edit"></i>
-                        <span>完善技能百科</span>
+                        <span>{{ $t('完善技能百科') }}</span>
                     </a>
                 </template>
                 <template slot="body">
@@ -21,7 +21,7 @@
             </WikiPanel>
 
             <!-- <details class="m-wiki-detail"> -->
-                <!-- <summary class="u-wiki__title"><i class="el-icon-info"></i>更多信息</summary> -->
+                <!-- <summary class="u-wiki__title"><i class="el-icon-info"></i>{{ $t('更多信息') }}</summary> -->
                 <!-- 历史版本 -->
                 <!-- <WikiRevisions type="skill" :source-id="id" /> -->
 
@@ -31,8 +31,8 @@
         </div>
         <div class="m-wiki-post-empty" v-if="is_empty">
             <i class="el-icon-s-opportunity"></i>
-            <span>暂无百科，我要</span>
-            <a class="s-link" :href="publish_url(`skill/${id}`)">完善百科</a>
+            <span>{{ $t('暂无百科，我要') }}</span>
+            <a class="s-link" :href="publish_url(`skill/${id}`)">{{ $t('完善百科') }}</a>
         </div>
     </div>
 </template>
