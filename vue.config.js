@@ -1,15 +1,15 @@
 const path = require("path");
 const pkg = require("./package.json");
 const { JX3BOX, SEO } = require("@jx3box/jx3box-common");
-const Setting = require("./setting.json");
+const Setting = require("./setting.vi.json");
 
 module.exports = {
     //❤️ Multiple pages ~
     pages: {
         index: {
-            title: "职业专栏 - JX3BOX",
+            title: Setting.title + Setting.suffix,
             entry: "src/main.js",
-            template: "public/index.html",
+            template: "public/index.vi.html",
             filename: "index.html",
         },
         // collection: {
